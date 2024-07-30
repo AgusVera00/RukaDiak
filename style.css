@@ -1,0 +1,897 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: "Quicksand", sans-serif;
+}
+
+
+header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(38, 0, 255, 0.295),rgba(2, 109, 250, 0.24)) , url(imagenes/landing.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+nav{
+    width: 100%;
+    height: 130px;
+    color: white;
+    background: #12305293;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    animation-delay: 0.5s;
+    animation-name: grow-ttb-in;
+
+}
+
+.logo{
+    font-weight: 600;
+    font-family: "Amatic SC", sans-serif;
+    color: white;
+    font-size: 30px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 3px 3px;
+    font-size: 12px;
+}
+
+.register a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 3px 8px;
+    font-size: 12px;
+    background: #ff7b00;
+    border-radius: 15px;
+}
+
+.register a:hover{
+    background: #ff5e00;
+}
+
+.h-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 650px;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+
+.h-text span{
+    letter-spacing: 2px;
+    padding: 8px 6px;
+    font-size: 14px;
+}
+
+.h-text h1{
+    font-family:  "Amatic SC", sans-serif; 
+    font-size: 3em;
+    font-weight: 800;
+
+}
+
+.h-text a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 12px;
+    background: #ff7b00;
+    border-radius: 15px;
+
+}
+
+.h-text a:hover{
+    background: #ff5e00;
+}
+
+
+#About{
+    width: 100%;
+    height: 80vh;
+
+}
+
+.container-about {
+    display: flex;
+    padding: 6%;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+}
+
+
+.about h2{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 8px;
+
+}
+
+.about span{
+    width: 100%;
+    padding: 8px;
+    font-size: 10px;
+}
+
+.imagen-about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.imagen-about img{
+    width: 140px;
+    height: 160px;
+}
+
+
+    
+
+
+.boton-mira{
+    display: flex;
+    justify-content: center;
+    width: 6%;
+    text-decoration: none;
+    font-size: 10px;
+    color: #ffffff;
+    background: #ff7b00;
+    padding: 10px 18px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    position: absolute;
+    left: 45%;
+
+    
+}
+
+.boton-mira:hover{
+    background: #ff5e00;
+}
+
+#Galery{
+    background: url(imagenes/46q.jpg), no-repeat;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.titulo-cabañas{
+    display: flex;
+    flex-direction: row-reverse;
+    font-family: "Amatic SC", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.container-galery{
+    display: flex;
+    padding: 5% 5%;
+    margin-bottom: 5%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin-top: 20px;
+   
+
+}
+
+.card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+
+
+}
+
+.card .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+
+
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3,35,54);
+    padding: 15px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link{
+    border-top:  solid 1px #ffffff;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+
+
+}
+
+.card .back .link a{
+    text-decoration: none;
+    position: absolute;
+    color: #ffffff;
+    padding: 0 10px;
+    margin: 5px 0;
+    background: #ff7b00;
+    border-radius: 10px;
+    
+
+
+}
+
+.card .back .link a:hover{
+    background: #ff5e00;
+}
+
+.card .back h3{
+    font-size: 20px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+#FAQ{
+    width: 90vw;
+    height: 80vh;
+    margin: 5% 8%;
+   
+    
+}
+
+#FAQ h2 {
+    font-family: "Amatic SC", sans-serif; 
+    font-size: 25px;
+    font-weight: 700;
+    padding: 10px;
+}
+
+.acordeonfaq {
+    background: #ffffff;
+}
+
+.acordeonfaq label{
+    display: block;
+    padding: 10px;
+    font-size: 10px;
+    background: rgb(3,35,54);
+    color: white;
+    cursor: pointer;
+    margin-bottom: 2px;
+    margin-right: 20px;
+    transition: all 300ms ease;
+
+}
+
+.acordeonfaq label:hover{
+    background: #ff7b00;
+}
+
+.acordeonfaq .contenido-acordeon{
+    padding: 0px;
+    margin: 5px 20px;
+    max-height: 0px;
+    font-size: 10px;
+    overflow: hidden;
+    transition: all 300ms ease;
+
+}
+
+.faq-acordeon:checked ~ .contenido-acordeon{
+    max-height: 100px;
+    padding: 10px 0px;
+}
+
+.faq-acordeon{
+    display: none;
+}
+
+#Contact {
+    background: url(imagenes/90736-OIWIX4-869.jpg);
+    background-attachment: fixed;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Contact h2{
+    font-family: "Amatic SC", sans-serif; 
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 10px;
+    padding: 10px;
+
+    
+}
+
+    
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+    margin: auto 8%;
+    margin-bottom: 50px;
+    font-size: 14px;
+
+}
+
+form label{
+    margin-bottom: 8px;
+
+}
+
+form input, form textarea {
+    margin-bottom:  16px;
+    padding: 16px;
+    border: 1px solid rgb(3,35,54) ;
+    border-radius: 5px;
+}
+
+form button{
+    padding: 12px;
+    border: none;
+    background-color: rgb(3,35,54) ;
+    color: #fff;
+    cursor: pointer;
+    margin: 5px 10px;
+    width: 100px;
+}
+
+form button:hover{
+    background-color:rgb(0, 26, 41);
+}
+
+.button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.button-delete{
+    background-color: rgb(173, 22, 22)
+    ;
+}
+
+.button-delete:hover{
+    background-color: rgb(118, 13, 13) ;
+
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 100;
+    padding: 10px;
+    font-size: 10px;
+    background-color: rgb(3, 35, 54);
+    color: #ffffff;
+    height: 40vh;
+    width: 100vw;
+}
+
+.sociales{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+
+    
+}
+
+.sociales a{
+    text-decoration: none;
+    color: #ffffff
+
+}
+
+.directo{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+
+
+}
+
+.directo a{
+    text-decoration: none;
+    color: #ffffff
+
+}
+
+@media (min-width: 334px){
+    .imagen-about{
+        margin-top: 20px;
+    }
+} 
+
+@media (min-width: 375px){
+
+
+    
+    .register a {
+        font-size: 14px;
+    }
+
+    .h-text a {
+        font-size: 14px;
+    }
+
+
+    .h-text h1 {
+
+        font-size: 3.5em;
+    }
+
+    .menu a{
+        padding: 4px 5px;
+        font-size: 14px;
+    }
+
+
+    .about span {
+
+        font-size: 11px;
+    }
+
+    .boton-mira {
+
+        padding: 10px 18px;
+        font-size: 11px;
+    }
+
+    .imagen-about{
+        margin-top: 40px;
+    }
+
+    .imagen-about img {
+        width: 145px;
+        height: 170px;
+    }
+
+    .titulo-cabañas {
+        margin-right: 15px;
+        font-size: 30px;
+    }
+
+    .about h2 {
+        font-size: 30px;
+    }
+
+    #FAQ h2 {
+
+        font-size: 30px;
+    
+    }
+
+    #Contact h2 {
+        font-size: 30px;
+    }
+
+}
+
+
+
+
+
+
+@media (min-width: 425px){
+    nav {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .h-text h1 {
+        font-size: 4em;
+    }
+
+    .acordeonfaq label {
+
+        font-size: 12px;
+    }
+
+    .about span {
+
+        font-size: 12px;
+    }
+
+    .imagen-about img {
+        width: 150px;
+        height: 190px;
+    }
+
+    footer {
+
+        font-size: 11px;
+
+    }
+
+
+}
+
+@media (min-width: 483px){
+    nav {
+        height: 50px;
+        align-content: center;
+    }
+}
+
+@media (min-width: 768px){
+    nav {
+        height: 50px;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
+
+    .register a {
+        padding: 5px 10px;
+    }
+
+    .menu a{
+        text-decoration: none;
+        color: #ffffff;
+        padding: 4px 8px;
+        font-size: 15px;
+    }
+
+    .h-text h1 {
+        font-size: 5em;
+    }
+
+    .h-text span {
+        letter-spacing: 3px;
+        padding: 10px 8px;
+    }
+
+    .container-about {
+        display: flex;
+        padding: 4%;
+        justify-content: space-evenly;
+    }
+
+    #About {
+
+        height: 90vh;
+    }
+
+    .about h2 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .about span {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .imagen-about {
+        width: 194px;
+        height: 241px;
+        padding: 10px;
+
+    }
+
+    .boton-mira {
+
+        width: 7%;
+        font-size: 14px;
+        padding: 10px 18px;
+
+    }
+
+    .titulo-cabañas {
+
+        font-size: 40px;
+        padding: 20px;
+        margin-right: 40px;
+    }
+
+    #FAQ h2 {
+
+        font-size: 40px;
+
+    }
+
+    .acordeonfaq label {
+        
+        padding: 20px;
+        font-size: 15px;
+        margin-bottom: 6px;
+        margin-right: 30px;
+
+    }
+
+    .acordeonfaq .contenido-acordeon {
+        margin: 5px 25px;
+        font-size: 15px;
+    }
+
+    #FAQ {
+        height: 100vh;
+
+    }
+
+    #Contact h2 {
+        font-size: 40px;
+
+    }
+
+    footer{
+        font-size: 15px;
+    }
+}
+   
+
+@media (min-width: 1024px) {
+
+        nav {
+            height: 60px;
+            justify-content: space-around;
+        }
+
+        .menu a {
+            padding: 8px 10px;
+            font-size: 16px;
+        }
+
+        .register a {
+
+            padding: 6px 11px;
+            font-size: 16px;
+
+        }
+
+        .logo{
+            font-size: 35px;
+        }
+
+        .h-text h1 {
+            font-size: 5.5em;
+            padding: 15px;
+
+        }
+
+        .h-text a {
+
+            padding: 6px 16px;
+            font-size: 16px;
+        }
+
+        .imagen-about img {
+            width: 220px;
+            height: 290px;
+        }
+
+        .about h2 {
+            font-size: 45px;
+        }
+
+        .titulo-cabañas {
+            font-size: 45px;
+            padding: 25px;
+            margin-right: 45px;
+        }
+
+        #FAQ h2 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        #Contact h2 {
+            font-size: 45px;
+        }
+        
+    }
+
+    @media (min-width: 1440px){
+
+        nav {
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 40px;
+        }
+        
+        .menu a {
+            padding: 10px 16px;
+            font-size: 21px;
+        }
+
+        .register a {
+            padding: 10px 18px;
+            font-size: 21px;
+        }
+
+        .h-text h1 {
+            font-size: 7em;
+            padding: 30px;
+        }
+
+        .h-text span {
+            letter-spacing: 5px;
+            padding: 14px 12px;
+            font-size: 20px;
+        }
+
+        .h-text a {
+            padding: 10px 18px;
+            font-size: 21px;
+        }
+
+        .container-about {
+            height: 70vh;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .about {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            width: 40%;
+            height: 100%;
+        }
+
+        .about h2 {
+            font-size: 60px;
+        }
+
+        .about span {
+ 
+            font-size: 21px;
+        }
+
+        .imagen-about {
+            width: 40%;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .imagen-about img {
+            width: 280px;
+            height: 360px;
+        }
+
+        .boton-mira {
+            font-size: 18px;
+        }
+
+        .titulo-cabañas {
+            font-size: 60px;
+            margin-right: 55px;
+        }
+
+        #FAQ h2 {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .acordeonfaq label {
+            padding: 20px;
+            font-size: 20px;
+            margin-bottom: 6px;
+            margin-right: 40px;
+        }
+
+        .acordeonfaq .contenido-acordeon {
+            margin: 5px 25px;
+            font-size: 18px;
+        }
+
+        #Contact h2 {
+            font-size: 60px;
+        }
+
+        form {
+            font-size: 18px;
+        }
+
+        form button{
+            font-size: 18px;
+            padding: 14px 10px;
+        }
+
+    
+            footer {
+                font-size: 18px;
+            }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+        
+
+
+    
+
