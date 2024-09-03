@@ -185,6 +185,7 @@ h1{
     transform: translateX(-100%);
     opacity: 0;
     transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    overflow: hidden;
 }
 
 .about.active {
@@ -229,6 +230,7 @@ h1{
     transform: translateX(100%);
     opacity: 0;
     transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    overflow: hidden;
   }
 
 .img-about-2 {
@@ -239,6 +241,7 @@ h1{
     transform: translateY(100%);
     opacity: 0;
     transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    overflow: hidden;
   }
 
   .img-about-1.active, .img-about-2.active {
@@ -527,6 +530,7 @@ h1{
     transform: translate(-50%);
     opacity: 0;
     transition: transform 0.4s ease-in-out, opacity 0.8s ease-in-out;
+    overflow: hidden;
 }
 
 .form.active {
